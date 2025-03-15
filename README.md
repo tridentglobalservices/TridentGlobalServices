@@ -1,28 +1,11 @@
-## Hi there 👋
-
-<!--
-**tridentglobalservices/TridentGlobalServices** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compress your images online with our fully responsive image compression tool. Optimize images for web use with adjustable compression levels.">
-    <meta name="keywords" content="image compression, optimize images, image optimizer, online image compressor">
-    <meta name="author" content="Your Name">
-    <title>Online Image Compression Tool</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,125 +13,77 @@ Here are some ideas to get you started:
             padding: 0;
             background-color: #f4f4f4;
         }
-
         header {
             background-color: #333;
-            color: #fff;
+            color: white;
             padding: 10px 0;
             text-align: center;
         }
-
-        main {
-            padding: 20px;
-        }
-
-        #compression-tool {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        nav {
             text-align: center;
+            background-color: #444;
         }
-
-        #image-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px;
         }
-
-        #image-container img {
-            max-width: 45%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
         }
-
+        section {
+            padding: 20px;
+        }
         footer {
-            background-color: #333;
-            color: #fff;
             text-align: center;
+            background-color: #333;
+            color: white;
             padding: 10px 0;
-            position: fixed;
+            position: absolute;
             width: 100%;
             bottom: 0;
         }
     </style>
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_SENSE_ID" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header>
-        <h1>Online Image Compression Tool</h1>
+        <h1>Welcome to My Homepage</h1>
+        <p>Your one-stop destination for everything!</p>
     </header>
-    <main>
-        <section id="ad-top">
-            <!-- AdSense Ad Unit -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-YOUR_AD_SENSE_ID"
-                 data-ad-slot="1234567890"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </section>
-        <section id="compression-tool">
-            <input type="file" id="image-input" accept="image/*">
-            <label for="compression-level">Compression Level:</label>
-            <input type="range" id="compression-level" min="0" max="1" step="0.1" value="0.5">
-            <span id="compression-value">0.5</span>
-            <button id="compress-btn">Compress Image</button>
-            <div id="image-container">
-                <img id="original-image" src="#" alt="Original Image">
-                <img id="compressed-image" src="#" alt="Compressed Image">
-            </div>
-        </section>
-        <section id="ad-bottom">
-            <!-- AdSense Ad Unit -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-YOUR_AD_SENSE_ID"
-                 data-ad-slot="0987654321"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </section>
-    </main>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Home Section</h2>
+        <p>Welcome to my homepage! Here you will find information about my services, background, and how to get in touch.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>This is where you can introduce yourself or your business and give some background information.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Here you can describe the services or products that you offer.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you want to get in touch, feel free to use the contact form or send us an email.</p>
+    </section>
+
     <footer>
-        <p>&copy; 2023 Online Image Compression Tool. All rights reserved.</p>
+        <p>&copy; 2025 My Homepage. All rights reserved.</p>
     </footer>
-    <script>
-        document.getElementById('compression-level').addEventListener('input', function() {
-            document.getElementById('compression-value').textContent = this.value;
-        });
 
-        document.getElementById('compress-btn').addEventListener('click', function() {
-            const fileInput = document.getElementById('image-input');
-            const compressionLevel = parseFloat(document.getElementById('compression-level').value);
-
-            if (fileInput.files && fileInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const img = new Image();
-                    img.src = e.target.result;
-
-                    img.onload = function() {
-                        const canvas = document.createElement('canvas');
-                        const ctx = canvas.getContext('2d');
-                        canvas.width = img.width;
-                        canvas.height = img.height;
-                        ctx.drawImage(img, 0, 0);
-
-                        const compressedImage = canvas.toDataURL('image/jpeg', compressionLevel);
-                        document.getElementById('compressed-image').src = compressedImage;
-                    };
-                };
-                reader.readAsDataURL(fileInput.files[0]);
-            }
-        });
-    </script>
 </body>
 </html>
